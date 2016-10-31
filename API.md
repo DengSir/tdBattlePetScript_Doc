@@ -63,20 +63,20 @@
 ## Function
 
 > 条件函数分为两类：
+>
 > 1. Compare 比较类
 >
->   语法： `Owner(Pet).Function operator value`
->
->   比较类需要指定运算符及比较值
->
->   运算符(operator)： `=` `!=` `>` `>=` `<` `<=`
->
+>   > 语法： `Owner(Pet).Function operator value`
+>   >
+>   > 比较类需要指定运算符及比较值
+>   >
+>   > 运算符(operator)： `=` `!=` `>` `>=` `<` `<=`
 >
 > 2. Boolean 布尔类
 >
->   语法： `[operator]Owner(Pet).Function`
->
->   布尔类只有一个单目运算符`!` 表示逻辑非
+>   > 语法： `[operator]Owner(Pet).Function`
+>   >
+>   > 布尔类只有一个单目运算符`!` 表示逻辑非
 >
 > 有些条件函数需要指定参数
 
@@ -149,6 +149,10 @@
 
 ### round (Boolean)
 
-> 判断轮数 不指定目标时为战斗总轮数，指定目标时为当前宠物上场第几轮
+> 判断轮数
+>
+> 1. 不指定目标时为战斗总轮数
+>
+> 2. 指定目标时为当前宠物上场第几轮
 >
 > `round = 1` `self.round < 3` `enemy.round = 1`
