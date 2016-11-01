@@ -156,3 +156,11 @@
 > 2. 指定目标时为当前宠物上场第几轮
 >
 > `round = 1` `self.round < 3` `enemy.round = 1`
+
+### played (Boolean)
+
+> 判断宠物是否上过场
+>
+> 双方的第一个宠物一定是上过场的
+>
+> `self(#3).played` `!enemy(泰莉).played`
