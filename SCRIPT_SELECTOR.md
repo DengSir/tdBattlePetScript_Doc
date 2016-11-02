@@ -74,7 +74,11 @@
 >
 > 查找脚本，如果找到，这个脚本将可以被用户选择
 >
-> 这是一个核心API
+> 这是脚本选择器的核心API
+
+`title = Plugin:GetTitleByKey(key)`
+
+> 当插件需要展示脚本名称时需要调用，插件中用法：`Plugin:OpenScriptEditor(key, Plugin:GetTitleByKey(key))`
 
 `Plugin:OnTooltipFormatting(tip, key)`
 
