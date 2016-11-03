@@ -101,21 +101,42 @@
 
 > 条件函数分为两类：
 >
-> 1. Compare 比较类
+> 1. Boolean 布尔
+>
+>   > 语法： `[operator]Owner(Pet).Function`
+>   >
+>   > 运算符(operator)： `!`
+>
+> 2. Compare 比较
 >
 >   > 语法： `Owner(Pet).Function operator value`
 >   >
 >   > 比较类需要指定运算符及比较值
 >   >
->   > 运算符(operator)： `=` `!=` `>` `>=` `<` `<=`
+>   > 运算符(operator)： `=` `!=` `>` `>=` `<` `<=` `~` `!~`
 >
-> 2. Boolean 布尔类
+> 3. Equality 相等性
 >
->   > 语法： `[operator]Owner(Pet).Function`
+>   > 语法：与Compare相同，但只能进行相等性运算
 >   >
->   > 布尔类只有一个单目运算符`!` 表示逻辑非
+>   > 运算符(operator)： `=` `!=` `~` `!~`
 >
 > 有些条件函数需要指定参数
+>
+> 运算符
+>
+> 1. `=` ：等于
+> 2. `!=`：不等于
+> 3. `>` ：大于
+> 4. `>=`：大于或等于
+> 5. `<` ：小于
+> 6. `<=`：小于或等于
+> 7. `~` ：包含于（类似python的 `in`）
+> 8. `!~`：不包含于（类似python的 `not in`）
+>
+> `~`的value指定多个值，用`,`分开，只要一个符合就返回true `self.type ~ 飞行,小动物`
+>
+> `!~`与`~`相反
 
 ### dead (Boolean)
 
@@ -184,6 +205,24 @@
 >
 > 自己的虚空精灵龙月火术冷却剩余小于或等于一轮： `self(虚空精灵龙).ability(月火术).duration <= 1`
 
+### ability.strong (Boolean)
+
+> **技能是否重击**
+>
+> `self.ability(奥术冲击).strong`
+
+### ability.weak (Boolean)
+
+> **技能是否轻击**
+>
+> `enemy.ability(#1).weak`
+
+### ability.type (Equality)
+
+> **技能种类**
+>
+> `self.ability(#1) = 魔法` `self.ability(#3) !~ 魔法,亡灵`
+
 ### round (Boolean)
 
 > **判断轮数**
@@ -201,3 +240,88 @@
 > 双方的第一个宠物一定是上过场的
 >
 > `self(#3).played` `!enemy(泰莉).played`
+
+
+### speed (Compare)
+
+> **判断宠物的速度**
+>
+> `self.speed < 292`
+
+### speed.fast (Boolean)
+
+> **判断目标是否更快**
+>
+> `enemy.speed.fast`
+
+### speed.slow (Boolean)
+
+> **判断目标是否更慢**
+>
+> `self.speed.slow`
+
+### level (Compare)
+
+> **判断目标等级**
+>
+> `self.level < 25`
+
+### level.max (Boolean)
+
+> **判断目标是否满级**
+>
+> `self(#3).level.max`
+
+### power (Compare)
+
+> **判断目标攻击**
+>
+> `self.power > 100`
+
+### type (Equality)
+
+> **判断宠物类型**
+>
+> `self(#2).type = 飞行` `enemy(#2) ~ 飞行,亡灵` `self.type = 2`
+
+### quality (Compare)
+
+> **判断宠物质量**
+>
+> `self.quality > 弱小` `self.quality = 4`
+
+## Type
+
+> 1 = 人型
+>
+> 2 = 龙类
+>
+> 3 = 飞行
+>
+> 4 = 亡灵
+>
+> 5 = 小动物
+>
+> 6 = 魔法
+>
+> 7 = 元素
+>
+> 8 = 野兽
+>
+> 9 = 水栖
+>
+> 10 = 机械
+
+## Quality
+
+> 1 = 弱小
+>
+> 2 = 普通
+>
+> 3 = 优秀
+>
+> 4 = 精良
+>
+> 5 = 史诗
+>
+> 6 = 传奇
