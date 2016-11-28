@@ -1,7 +1,7 @@
 
 # Actions
 
-### ability
+### ability / use
 
 > **使用技能**
 >
@@ -11,11 +11,11 @@
 >
 > 使用技能可以用名称/id/序号进行定位
 >
-> 使用月火术： `ability(月火术)`
+> 使用月火术： `ability(月火术)` `use(月火术)`
 >
-> 使用月火术(id)： `ability(595)`
+> 使用月火术(id)： `ability(595)` `use(595)`
 >
-> 使用第三个技能： `ability(#3)`
+> 使用第三个技能： `ability(#3)` `use(#3)`
 
 ### change
 
