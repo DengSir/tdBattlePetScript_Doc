@@ -2,6 +2,7 @@ Translated using Google Translate, and tried to make the result more understanda
 interpretation might be wrong (e.g., Google Translate gives only half of the sentence or translation doesn't make sense)
 
 Below is an example of how to write a script. Let us suppose that the opponent to defeat is Quintessence of Light,
+and the pets in team are Nether Faerie Dragon and Chrominius. The strategy is the following spell
 order: Moonfire + Life Exchange + (swap to Chrominius) + Howl + Surge of Power.
 
 First we program a use of Moonfire:
